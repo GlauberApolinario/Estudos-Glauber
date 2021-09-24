@@ -16,6 +16,7 @@ export default class App extends React.Component {
 
   getPokePicture = async (e) => {
     const response = await axios.get(e.target.value)
+    console.log("picture", e.target.value)
     this.setState({pokePicture: response.data.sprites.front_default})
   }
 
