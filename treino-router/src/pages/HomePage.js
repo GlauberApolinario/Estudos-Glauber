@@ -1,6 +1,13 @@
 import React from 'react';
+import {useHistory} from "react-router-dom"
 
 function HomePage() {
+    const history = useHistory()
+
+    const gotoAboutPage = () =>{
+        history.push("/about")
+    }
+
     return ( 
         <div>
             <p>HomePage</p>
@@ -12,7 +19,11 @@ function HomePage() {
                 class="giphy-embed" 
                 allowFullScreen>
             </iframe>
-            <p><a href="https://giphy.com/gifs/philipparice-house-diving-wheels-5xtDarqCp0eomZaFJW8">via GIPHY</a></p>
+            <p>
+                <button onClick = {gotoAboutPage}>
+                    Ir para Sobre
+                </button>
+            </p>
         </div>
     );
 }
