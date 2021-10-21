@@ -4,21 +4,18 @@ import styled from "styled-components";
 
 const Card = styled.div`
     display: grid;
-    gap: 5px;
+    gap: 10px;
     grid-template-columns: repeat(5, 1fr);
-
 `
 
 const HomePage = () => {
-    const [pokemons, loading, error] = useRequestData("https://pokeapi.co/api/v2/pokemon/")
-    console.log(pokemons, "teste")
+    const url = 'https://pokeapi.co/api/v2/pokemon/'
+    const [pokemons, loading, error] = useRequestData(url)
     const newPokemons = pokemons.results
-    console.log("aux", pokemons)
-    console.log("results", newPokemons)
     const showPokemons =
     newPokemons &&
     newPokemons.map((poke) => {
-        return <PokeCard key={poke.id} id={poke.id} name={poke.name} />;
+        return <PokeCard key={poke.name} name={poke.name} url={poke.url}/>;
     });
     return (
     <Card>

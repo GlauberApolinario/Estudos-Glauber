@@ -16,7 +16,7 @@ const Routes = () => {
                 <Route exact path={"/pokedex"}>
                     <MyPokedex />
                 </Route>
-                <Route exact path={"/detalhes"}>
+                <Route exact path={"/detalhes/:nome"}>
                     <Details />
                 </Route>
                 <Route>

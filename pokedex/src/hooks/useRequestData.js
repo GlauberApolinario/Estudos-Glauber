@@ -10,7 +10,7 @@ export const useRequestData = (url) => {
     const getPokes = () => {
       setLoading(true);
       axios
-        .get(url)
+        .get(url ? url: "")
         .then((res) => {
         console.log("pokemon request", res.data)
         console.log(url)
