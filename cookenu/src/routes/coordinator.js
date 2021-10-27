@@ -1,9 +1,9 @@
-export const goToLogin = (history) => {
+export const goToLoginPage = (history) => {
     history.push("/login")
 };
 
-export const goToSignUp = (history) => {
-    history.push("")
+export const goToSignUpPage = (history) => {
+    history.push("/cadastro")
 };
 
 export const goToAddRecipesPage = (history) => {
@@ -14,6 +14,6 @@ export const goToRecipeDetailPage = (history, id) => {
     history.push(`/detalhe/${id}`)
 };
 
-export const goToRecipesList = (history) => {
+export const goToRecipesListPage = (history) => {
     history.push("/")
 };
