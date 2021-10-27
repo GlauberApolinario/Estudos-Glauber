@@ -1,11 +1,11 @@
 import React from 'react';
-import { useHistory } from 'react-router';
 import { LogoImage, ScreenContainer } from './styled';
 import logo from "../../assets/logo.png"
 import SignUpForm from './SignUpForm';
+import useUnprotectedPage from '../../hooks/useUnprotectedPage';
 
 const SignUpPage = () => {
-    const history = useHistory()
+    useUnprotectedPage()
     return ( <div>
         <ScreenContainer>
             <LogoImage src={logo} />

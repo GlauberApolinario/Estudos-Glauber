@@ -2,14 +2,19 @@ import React from 'react';
 import {InputsContainer} from "./styled"
 import { Button, TextField } from '@material-ui/core';
 import useForm from "../../hooks/useForm"
+import {login} from "../../services/user"
+import { useHistory } from 'react-router';
+
 
 const LoginForm = () => {
+    const history = useHistory()
     const [form, onChange, clear] = useForm({ email: "", password: "" })
 
     const onSubmitForm = (e) => {
         e.preventDefault()
-
+        login(form, clear, history)
     }
+    
     return ( 
             <InputsContainer>
                 <form onSubmit={onSubmitForm}>

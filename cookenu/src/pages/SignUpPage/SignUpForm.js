@@ -1,12 +1,16 @@
 import { Button, TextField } from '@material-ui/core';
 import React from 'react';
+import { useHistory } from 'react-router';
 import useForm from '../../hooks/useForm';
+import { signUp } from '../../services/user';
 import { InputsContainer } from './styled';
 
 const SignUpForm = () => {
+    const history = useHistory()
     const [form, onChange, clear] = useForm({name:"", email:"", password:""})
     const onSubmitForm = (e) => {
         e.preventDefault()
+        signUp(form, clear, history)
     }
     return (
         <InputsContainer>
