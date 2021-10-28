@@ -16,7 +16,9 @@ const Router = ({setLogButtonText}) => {
                 />
             </Route>
             <Route exact path="/cadastro">
-                <SignUpPage />
+                <SignUpPage 
+                    setLogButtonText={setLogButtonText}
+                />
             </Route>
             <Route exact path="/">
                 <RecipesListPage />

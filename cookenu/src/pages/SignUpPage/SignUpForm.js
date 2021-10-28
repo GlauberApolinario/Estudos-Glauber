@@ -5,12 +5,12 @@ import useForm from '../../hooks/useForm';
 import { signUp } from '../../services/user';
 import { InputsContainer } from './styled';
 
-const SignUpForm = () => {
+const SignUpForm = ({setLogButtonText}) => {
     const history = useHistory()
     const [form, onChange, clear] = useForm({name:"", email:"", password:""})
     const onSubmitForm = (e) => {
         e.preventDefault()
-        signUp(form, clear, history)
+        signUp(form, clear, history, setLogButtonText)
     }
     return (
         <InputsContainer>
