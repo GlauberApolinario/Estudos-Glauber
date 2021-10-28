@@ -1,38 +1,36 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from "react-router-dom"
+import { Switch, Route} from "react-router-dom"
 import AddRecipesPage from "../pages/AddRecipesPage/AddRecipesPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import RecipeDetailPaage from "../pages/RecipeDetailPage/RecipeDetailPage";
 import RecipesListPage from "../pages/RecipesListPage/RecipesListPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import Header from "../components/Header/Header"
 
-const Router = () => {
+const Router = ({setLogButtonText}) => {
     return ( 
-        <BrowserRouter>
-            <Header />
-            <Switch>
-                <Route exact path="/login">
-                    <LoginPage />
-                </Route>
-                <Route exact path="/cadastro">
-                    <SignUpPage />
-                </Route>
-                <Route exact path="/">
-                    <RecipesListPage />
-                </Route>
-                <Route exact path="/adicionar-receita">
-                    <AddRecipesPage />
-                </Route>
-                <Route exact path="/detalhe/:id">
-                    <RecipeDetailPaage />
-                </Route>
-                <Route>
-                    <ErrorPage />
-                </Route>
-            </Switch>
-        </BrowserRouter>
+        <Switch>
+            <Route exact path="/login">
+                <LoginPage 
+                    setLogButtonText={setLogButtonText}
+                />
+            </Route>
+            <Route exact path="/cadastro">
+                <SignUpPage />
+            </Route>
+            <Route exact path="/">
+                <RecipesListPage />
+            </Route>
+            <Route exact path="/adicionar-receita">
+                <AddRecipesPage />
+            </Route>
+            <Route exact path="/detalhe/:id">
+                <RecipeDetailPaage />
+            </Route>
+            <Route>
+                <ErrorPage />
+            </Route>
+        </Switch>
     );
 }
 

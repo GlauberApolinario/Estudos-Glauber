@@ -6,13 +6,13 @@ import {login} from "../../services/user"
 import { useHistory } from 'react-router';
 
 
-const LoginForm = () => {
+const LoginForm = ({setLogButtonText}) => {
     const history = useHistory()
     const [form, onChange, clear] = useForm({ email: "", password: "" })
 
     const onSubmitForm = (e) => {
         e.preventDefault()
-        login(form, clear, history)
+        login(form, clear, history, setLogButtonText)
     }
     
     return ( 
