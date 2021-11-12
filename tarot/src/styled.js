@@ -5,7 +5,7 @@ export const CardContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     margin: 30px;
-    margin-top:80px;
+    margin-top:150px;
 `
 export const AppContainer = styled.div `
     display: flex;
@@ -14,14 +14,20 @@ export const AppContainer = styled.div `
 `
 
 export const Header = styled.div`
-  position:fixed;
-  display: flex;
-  flex-direction: column;
-  top:0;
-  left:0;
-  width:100%;
-  background:white;
-  text-align:center;
-  padding: 20px 0;
-  z-index:1;
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    top:0;
+    left:0;
+    width:100%;
+    background:white;
+    text-align:center;
+    padding: 20px 0;
+    z-index:1;
 `
+
+export const ButtonContainer = styled.div`
+    margin-bottom: 10px
+
+`
+

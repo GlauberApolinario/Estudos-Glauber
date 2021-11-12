@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Card, CardContent } from "@material-ui/core";
+import { Card } from "@material-ui/core";
 
 export const CardContainer = styled(Card)`
     width: 180px;

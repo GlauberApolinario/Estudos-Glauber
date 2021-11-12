@@ -5,20 +5,18 @@ import { CardContainer} from './styled';
 
 
 const CardTarot = (props) => {
-  console.log(props.description)
     
     return (
         <CardContainer>
             <CardActionArea>
                 <CardMedia
                     onClick={()=>props.onClickCard()}
-                    backImage={props.backImage}
+                    back={props.back}
                     component={'img'}
                     alt ={props.name}
-                    image={props.inicio?(props.clicked===props.name?props.image:props.backImage):props.image}
+                    image={props.inicio?(props.clicked===props.name?props.image:props.back):props.image}
                     description={props.description}
                 >
-                    
                 </CardMedia>
             </CardActionArea>
             </CardContainer>
