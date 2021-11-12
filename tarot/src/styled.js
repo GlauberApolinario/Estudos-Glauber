@@ -4,13 +4,14 @@ export const CardContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 30px;
     margin-top:150px;
+    justify-content: center;
+    width: 100vw;
+
 `
 export const AppContainer = styled.div `
     display: flex;
     flex-direction: column;
-
 `
 
 export const Header = styled.div`
@@ -28,6 +29,5 @@ export const Header = styled.div`
 
 export const ButtonContainer = styled.div`
     margin-bottom: 10px
-
 `
 
