@@ -7,13 +7,24 @@ ESTRUTURA DE DADOS
     nome
     email
     senha
-    posts
-      foto
-      descricao
-      dataCriacao
-      tipo: "normal" | "evento"
-      curtidas
-      comentarios
+
+  posts
+    idUsuario (FK)
+    id
+    foto
+    descricao
+    dataCriacao
+    tipo: "normal" | "evento"
+    
+  curtidas
+    idUsuario (FK)
+    idPost (FK)
+
+  comentarios
+    id
+    idUsuario (FK)
+    idPost (FK)
+    texto
 
 FUNCIONALIDADES
 
