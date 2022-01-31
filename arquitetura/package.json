@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && node build/tests",
-    "start": "tsc && node build/tests"
+    "test": "tsc && node build/tests.js",
+    "start": "tsc && node ./build/index.js"
   },
   "keywords": [],
   "author": "",
