@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import createUser from './endpoints/createUser'
 import getUserById from './endpoints/getUserById'
 import editUser from './endpoints/editUser'
+import createTask from './endpoints/createTask'
 
 dotenv.config()
 
@@ -27,6 +28,8 @@ app.put('/user', createUser)
 app.get('/user/:id', getUserById)
 
 app.post('/user/edit/:id', editUser)
+
+app.purge('/task', createTask)
 
 app.listen(3003, ()=>{
     console.log('Servidor ativo na porta 3003')
