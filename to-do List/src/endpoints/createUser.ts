@@ -1,4 +1,4 @@
-import {NextFunction, Request, Response} from 'express';
+import {Request, Response} from 'express';
 import insertUser from '../data/insertUser';
 
 export default async function createUser(req:Request, res:Response)
@@ -31,6 +31,6 @@ export default async function createUser(req:Request, res:Response)
     }catch (error: any){
         res.status(400).send({
             message: error.message || error.sqlMessage
-        })
-    }
+    })
+}
 }
